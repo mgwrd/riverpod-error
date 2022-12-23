@@ -10,20 +10,17 @@ class ExampleNotifier extends _$ExampleNotifier {
   @override
   FutureOr<List<int>> build() async {
     final a = await ref.watch(streamAProvider.future);
-    final b = await ref.watch(streamBProvider.future);
-
-    return [a, b];
+    //final b = await ref.watch(streamBProvider.future);
+    return [a, a];
   }
 
   Future<void> updateStreams() async {
-    state = AsyncLoading<List<int>>().copyWithPrevious(state);
+    //state = AsyncLoading<List<int>>().copyWithPrevious(state);
     update((state) async {
       final a = Random().nextInt(20);
-      final b = Random().nextInt(20);
       await Future.delayed(const Duration(milliseconds: 2000));
       aSubject.add(a);
-      bSubject.add(b);
-      return [a,b];
+      return [a];
     });
   }
 }

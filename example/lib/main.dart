@@ -27,7 +27,7 @@ class MyApp extends ConsumerWidget {
         body: Column(
           children: [
             exampleProvider.map(
-              data: (data) => Text(data.value.toString()),
+              data: (data) => Text(data.value),
               error: (data) => Text(data.error.toString()),
               loading: (_) => const CircularProgressIndicator(),
             ),

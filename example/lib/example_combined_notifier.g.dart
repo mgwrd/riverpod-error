@@ -30,20 +30,22 @@ class _SystemHash {
 }
 
 String $ExampleCombinedNotifierHash() =>
-    r'13829888a66bc27a3c5f18e554b6a5f71afb578c';
+    r'ff956690bddf11f1a5a6d49165405d744109af1b';
 
 /// See also [ExampleCombinedNotifier].
 final exampleCombinedNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<ExampleCombinedNotifier, int>(
+    AutoDisposeAsyncNotifierProvider<ExampleCombinedNotifier, String>(
   ExampleCombinedNotifier.new,
   name: r'exampleCombinedNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : $ExampleCombinedNotifierHash,
 );
-typedef ExampleCombinedNotifierRef = AutoDisposeAsyncNotifierProviderRef<int>;
+typedef ExampleCombinedNotifierRef
+    = AutoDisposeAsyncNotifierProviderRef<String>;
 
-abstract class _$ExampleCombinedNotifier extends AutoDisposeAsyncNotifier<int> {
+abstract class _$ExampleCombinedNotifier
+    extends AutoDisposeAsyncNotifier<String> {
   @override
-  FutureOr<int> build();
+  FutureOr<String> build();
 }

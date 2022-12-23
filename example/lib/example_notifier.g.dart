@@ -29,7 +29,7 @@ class _SystemHash {
   }
 }
 
-String $ExampleNotifierHash() => r'5771725bd7c82faab8905789f504fd4e00b2dce2';
+String $ExampleNotifierHash() => r'4ac33653d6f288adaf699875c10c0057afad5a03';
 
 /// See also [ExampleNotifier].
 final exampleNotifierProvider =
